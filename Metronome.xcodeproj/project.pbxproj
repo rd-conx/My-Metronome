@@ -40,6 +40,7 @@
 		8056458E2B1628EE00DB41B9 /* MetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */; };
 		805645922B1628F000DB41B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805645912B1628F000DB41B9 /* Assets.xcassets */; };
 		805645952B1628F000DB41B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805645942B1628F000DB41B9 /* Preview Assets.xcassets */; };
+		805EF0452C9F460A001B390C /* sizeVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805EF0442C9F4600001B390C /* sizeVariables.swift */; };
 		805FE6EA2C8484730064D78E /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6E92C8484730064D78E /* KnobView.swift */; };
 		805FE6EE2C84B8FE0064D78E /* TapTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6ED2C84B8FD0064D78E /* TapTempo.swift */; };
 		806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806771A92B31C0CE0037F296 /* ThemeManager.swift */; };
@@ -114,6 +115,7 @@
 		8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeApp.swift; sourceTree = "<group>"; };
 		805645912B1628F000DB41B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		805645942B1628F000DB41B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		805EF0442C9F4600001B390C /* sizeVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizeVariables.swift; sourceTree = "<group>"; };
 		805FE6E92C8484730064D78E /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
 		805FE6ED2C84B8FD0064D78E /* TapTempo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapTempo.swift; sourceTree = "<group>"; };
 		806771A92B31C0CE0037F296 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				802B5FD62C8F439C006099BA /* HideHelperEnum.swift */,
 				802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */,
 				80C3081E2C90445A00CB5BBE /* ThemeOption.swift */,
+				805EF0442C9F4600001B390C /* sizeVariables.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				802C8A642C622284004DC3A4 /* AccentArrays.swift in Sources */,
 				80A0404D2C5CEC75006CAF82 /* SoundManager.swift in Sources */,
 				808621A32C80835600C6EED6 /* FlashingCapsule.swift in Sources */,
+				805EF0452C9F460A001B390C /* sizeVariables.swift in Sources */,
 				803BAD202C733E4F004E3C39 /* AccentPresetMenuToolbar.swift in Sources */,
 				80208DD52C5E35F20020FA56 /* SettingsManager.swift in Sources */,
 				806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */,

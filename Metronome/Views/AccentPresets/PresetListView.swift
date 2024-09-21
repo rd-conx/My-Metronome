@@ -105,7 +105,6 @@ struct PresetsListView: View {
         }
         .listStyle(.insetGrouped)
         .environment(\.defaultMinListHeaderHeight, 0)
-//        .frame(maxHeight: deviceScreen.size.width > 375 ? deviceScreen.size.height * 0.25 : deviceScreen.size.height * 0.33, alignment: .top)
         .frame(maxHeight: self.deviceScreen.componentSizing[.presetListMaxHeight], alignment: .top)
         
     }

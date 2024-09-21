@@ -26,15 +26,12 @@ struct MetronomeView: View {
     
     var body: some View {
         
-//        let topScreenBottomPadding: CGFloat = deviceScreen.size.width > deviceScreen.SE_WIDTH_BP ? 20 : 0
         
         VStack {
             TopScreenView()
                 .environmentObject(metronome.ticker)
                 .opacity(opacities.topScreenView)
-//                .padding(.bottom, topScreenBottomPadding)
                 .padding(.bottom, self.deviceScreen.componentSizing[.topScreenBttmPad])
-//            Spacer(minLength: deviceScreen.size.height < 800 ? 0 : deviceScreen.size.height * 0.07)
             Spacer(minLength: self.deviceScreen.componentSizing[.topScreenAndBeatsSpacer])
             ZStack {
                 BeatView(currentBeat: $currentBeat)
@@ -49,23 +46,17 @@ struct MetronomeView: View {
                 AccentPresetMenuView(showAccentMenu: $showAccentMenu)
                     .opacity(opacities.presetMenu)
                     .animation(.default, value: opacities.presetMenu)
-//                    .offset(y: deviceScreen.size.height < 800 ? 0 : -deviceScreen.size.height * 0.1)
                     .offset(y: self.deviceScreen.componentSizing[.accentPresetMenuViewOffsetY]!)
-                    .frame(maxWidth: 600)
+                    .frame(maxWidth: self.deviceScreen.componentSizing[.presetMenuMaxWidth])
                 
                 VStack {
                     
-//                    Spacer(minLength: deviceScreen.size.height * 0.2)
                     Spacer(minLength: self.deviceScreen.componentSizing[.accentPresetMenuViewAndPlayViewSpacer])
                     PlayView(currentBar: $currentBar, currentBeat: $currentBeat)
                         .opacity(opacities.playView)
 
                     TempoMarkingView()
                         .opacity(opacities.tempoMarkingView)
-                    
-//                    TimeSigArrowsView()
-//                        .opacity(opacities.tempoView)
-//                        .offset(y: decideArrowsYOffset(deviceScreen.size))
                     
                     ZStack {
                         TempoView()
@@ -83,7 +74,6 @@ struct MetronomeView: View {
                     .onChange(of: tempoOrTimeSigSelection) {
                         self.switchTempoAndTimeSig()
                     }
-//                    .frame(maxWidth: deviceScreen.size.width <= 430 ? deviceScreen.size.width * 0.9 : deviceScreen.size.width * 0.7)
                     .frame(maxWidth: self.deviceScreen.componentSizing[.tempoTimeSigPickerFrameMaxWidth])
                     .padding(.bottom, 5)
                     .opacity(opacities.tempoOrTimeSigSelector)
@@ -128,20 +118,6 @@ struct MetronomeView: View {
             tempoVisible = true
         }
     }
-    
-    private func decideArrowsYOffset(_ deviceSize: CGSize) -> CGFloat {
-        if deviceSize.width == deviceScreen.SE_WIDTH_BP {
-            return 10
-        } else if deviceSize.width < 600 {
-            return 30
-        } else if deviceSize.width < 800 {
-            return 50
-        } else {
-            return 100
-        }
-    }
-    
-
 }
 
 
