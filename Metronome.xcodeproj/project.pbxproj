@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8000D95C2B2C795D00004495 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000D95B2B2C795D00004495 /* PlayView.swift */; };
+		8000D95E2B2C8E3200004495 /* TimeSigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000D95D2B2C8E3200004495 /* TimeSigView.swift */; };
+		800E75F62BE0F72000B79F6A /* click1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 800E75F22BE0F72000B79F6A /* click1.wav */; };
+		800E75F82BE0F72000B79F6A /* click2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 800E75F42BE0F72000B79F6A /* click2.wav */; };
+		800E75F92BE0F72000B79F6A /* click4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 800E75F52BE0F72000B79F6A /* click4.wav */; };
+		80208DD52C5E35F20020FA56 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DD42C5E35F20020FA56 /* SettingsManager.swift */; };
+		80208DFA2C5FA3BC0020FA56 /* CustomColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */; };
+		80208DFE2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */; };
+		802B5FD32C8F19C8006099BA /* KnobController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD22C8F19C8006099BA /* KnobController.swift */; };
+		802B5FD72C8F439C006099BA /* HideHelperEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD62C8F439C006099BA /* HideHelperEnum.swift */; };
+		802B5FD92C8F43B2006099BA /* TempoChangeSpeedEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */; };
+		802C8A622C621FF5004DC3A4 /* TopScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802C8A612C621FF5004DC3A4 /* TopScreenView.swift */; };
+		802C8A642C622284004DC3A4 /* AccentArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802C8A632C622284004DC3A4 /* AccentArrays.swift */; };
+		803385AF2C5D3FC5009F0FC9 /* GradientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803385AE2C5D3FC5009F0FC9 /* GradientManager.swift */; };
+		803646F52B30A5D400B63C64 /* TempoMarkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803646F42B30A5D400B63C64 /* TempoMarkingView.swift */; };
+		80379D262B2DA303008D7DC0 /* BeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80379D252B2DA303008D7DC0 /* BeatView.swift */; };
+		8037D7752C625B54002BE46C /* MetronomeTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037D7742C625B54002BE46C /* MetronomeTicker.swift */; };
+		8037D77B2C64FC53002BE46C /* AccentPresetMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037D77A2C64FC53002BE46C /* AccentPresetMenuView.swift */; };
+		803BAD1E2C733C2D004E3C39 /* PresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD1D2C733C2D004E3C39 /* PresetListView.swift */; };
+		803BAD202C733E4F004E3C39 /* AccentPresetMenuToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD1F2C733E4F004E3C39 /* AccentPresetMenuToolbar.swift */; };
+		803BAD222C7340C1004E3C39 /* ChangePresetNameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD212C7340C1004E3C39 /* ChangePresetNameAlert.swift */; };
+		803BAD242C73419F004E3C39 /* ResetCurrentPresetsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD232C73419F004E3C39 /* ResetCurrentPresetsAlert.swift */; };
+		803BAD272C739C7C004E3C39 /* MetronomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD262C739C7C004E3C39 /* MetronomeConstants.swift */; };
+		803BAD2B2C74C25D004E3C39 /* AddNewPresetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD2A2C74C25D004E3C39 /* AddNewPresetAlert.swift */; };
+		80545A3C2C85FFD3001A2881 /* Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3B2C85FFD3001A2881 /* Opacities.swift */; };
+		80545A3E2C8706BD001A2881 /* ObjectBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3D2C8706BD001A2881 /* ObjectBounds.swift */; };
+		80545A402C885108001A2881 /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3F2C885108001A2881 /* MetronomeView.swift */; };
+		80545A442C8851DF001A2881 /* TempoAndTimeSigEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A432C8851DF001A2881 /* TempoAndTimeSigEnum.swift */; };
+		80545A462C885203001A2881 /* ViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A452C885203001A2881 /* ViewsManager.swift */; };
+		80545A482C885621001A2881 /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A472C885621001A2881 /* DeviceScreen.swift */; };
+		8056458E2B1628EE00DB41B9 /* MetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */; };
+		805645922B1628F000DB41B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805645912B1628F000DB41B9 /* Assets.xcassets */; };
+		805645952B1628F000DB41B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805645942B1628F000DB41B9 /* Preview Assets.xcassets */; };
+		805FE6EA2C8484730064D78E /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6E92C8484730064D78E /* KnobView.swift */; };
+		805FE6EE2C84B8FE0064D78E /* TapTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6ED2C84B8FD0064D78E /* TapTempo.swift */; };
+		806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806771A92B31C0CE0037F296 /* ThemeManager.swift */; };
+		8070DF762BB2C8E0004A8935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070DF752BB2C8E0004A8935 /* ContentView.swift */; };
+		8072636E2C8A021D004687C2 /* TempoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072636D2C8A021D004687C2 /* TempoView.swift */; };
+		807263702C8A04C9004687C2 /* CircleOfDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072636F2C8A04C9004687C2 /* CircleOfDots.swift */; };
+		807E51902BBD9DD400C7799E /* DenominatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E518F2BBD9DD400C7799E /* DenominatorView.swift */; };
+		8086218B2C80728A00C6EED6 /* click3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8086218A2C80728A00C6EED6 /* click3.wav */; };
+		8086219A2C807BE200C6EED6 /* block4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621962C807BE100C6EED6 /* block4.wav */; };
+		8086219B2C807BE200C6EED6 /* block3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621972C807BE100C6EED6 /* block3.wav */; };
+		8086219C2C807BE200C6EED6 /* block1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621982C807BE200C6EED6 /* block1.wav */; };
+		8086219D2C807BE200C6EED6 /* block2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621992C807BE200C6EED6 /* block2.wav */; };
+		8086219F2C80815200C6EED6 /* InteractiveCapsulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086219E2C80815200C6EED6 /* InteractiveCapsulesView.swift */; };
+		808621A12C80816600C6EED6 /* FlashingCapsulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A02C80816600C6EED6 /* FlashingCapsulesView.swift */; };
+		808621A32C80835600C6EED6 /* FlashingCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A22C80835600C6EED6 /* FlashingCapsule.swift */; };
+		808621A52C80835D00C6EED6 /* InteractiveCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */; };
+		808621AF2C81CED400C6EED6 /* NewPresetNamePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */; };
+		8086FFE82B1FAA8500E6EBA0 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */; };
+		808E9C862C6105F700672D2A /* MetronomeIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 808E9C852C6105F700672D2A /* MetronomeIcon.jpg */; };
+		808E9C882C612F4300672D2A /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808E9C872C612F4300672D2A /* SettingsMenuView.swift */; };
+		808E9C8A2C6143F100672D2A /* MetronomeIconDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */; };
+		8098C53C2BD7B6BF008F2F32 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098C53B2BD7B6BF008F2F32 /* CapsuleView.swift */; };
+		80A0404D2C5CEC75006CAF82 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A0404C2C5CEC75006CAF82 /* SoundManager.swift */; };
+		80C3081F2C90445A00CB5BBE /* ThemeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3081E2C90445A00CB5BBE /* ThemeOption.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80B452FD2B31EA110064DE3E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8000D95B2B2C795D00004495 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		8000D95D2B2C8E3200004495 /* TimeSigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSigView.swift; sourceTree = "<group>"; };
+		800E75F22BE0F72000B79F6A /* click1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click1.wav; sourceTree = "<group>"; };
+		800E75F42BE0F72000B79F6A /* click2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click2.wav; sourceTree = "<group>"; };
+		800E75F52BE0F72000B79F6A /* click4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click4.wav; sourceTree = "<group>"; };
+		80208DD42C5E35F20020FA56 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = Metronome/Classes/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
+		80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorScheme.swift; sourceTree = "<group>"; };
+		80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorSchemeViewModifier.swift; sourceTree = "<group>"; };
+		802B5FD22C8F19C8006099BA /* KnobController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobController.swift; sourceTree = "<group>"; };
+		802B5FD62C8F439C006099BA /* HideHelperEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideHelperEnum.swift; sourceTree = "<group>"; };
+		802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoChangeSpeedEnum.swift; sourceTree = "<group>"; };
+		802C8A612C621FF5004DC3A4 /* TopScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreenView.swift; sourceTree = "<group>"; };
+		802C8A632C622284004DC3A4 /* AccentArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentArrays.swift; sourceTree = "<group>"; };
+		803385AE2C5D3FC5009F0FC9 /* GradientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientManager.swift; sourceTree = "<group>"; };
+		803646F42B30A5D400B63C64 /* TempoMarkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoMarkingView.swift; sourceTree = "<group>"; };
+		80379D252B2DA303008D7DC0 /* BeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatView.swift; sourceTree = "<group>"; };
+		8037D7742C625B54002BE46C /* MetronomeTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetronomeTicker.swift; path = Metronome/Classes/MetronomeTicker.swift; sourceTree = SOURCE_ROOT; };
+		8037D77A2C64FC53002BE46C /* AccentPresetMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentPresetMenuView.swift; sourceTree = "<group>"; };
+		803BAD1D2C733C2D004E3C39 /* PresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListView.swift; sourceTree = "<group>"; };
+		803BAD1F2C733E4F004E3C39 /* AccentPresetMenuToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentPresetMenuToolbar.swift; sourceTree = "<group>"; };
+		803BAD212C7340C1004E3C39 /* ChangePresetNameAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePresetNameAlert.swift; sourceTree = "<group>"; };
+		803BAD232C73419F004E3C39 /* ResetCurrentPresetsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCurrentPresetsAlert.swift; sourceTree = "<group>"; };
+		803BAD262C739C7C004E3C39 /* MetronomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeConstants.swift; sourceTree = "<group>"; };
+		803BAD2A2C74C25D004E3C39 /* AddNewPresetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPresetAlert.swift; sourceTree = "<group>"; };
+		80545A3B2C85FFD3001A2881 /* Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opacities.swift; sourceTree = "<group>"; };
+		80545A3D2C8706BD001A2881 /* ObjectBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectBounds.swift; path = Metronome/Structs/ObjectBounds.swift; sourceTree = SOURCE_ROOT; };
+		80545A3F2C885108001A2881 /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetronomeView.swift; path = ScreenSizeViews/MetronomeView.swift; sourceTree = "<group>"; };
+		80545A432C8851DF001A2881 /* TempoAndTimeSigEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoAndTimeSigEnum.swift; sourceTree = "<group>"; };
+		80545A452C885203001A2881 /* ViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsManager.swift; sourceTree = "<group>"; };
+		80545A472C885621001A2881 /* DeviceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreen.swift; sourceTree = "<group>"; };
+		8056458A2B1628EE00DB41B9 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeApp.swift; sourceTree = "<group>"; };
+		805645912B1628F000DB41B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		805645942B1628F000DB41B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		805FE6E92C8484730064D78E /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		805FE6ED2C84B8FD0064D78E /* TapTempo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapTempo.swift; sourceTree = "<group>"; };
+		806771A92B31C0CE0037F296 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		8070DF752BB2C8E0004A8935 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8072636D2C8A021D004687C2 /* TempoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoView.swift; sourceTree = "<group>"; };
+		8072636F2C8A04C9004687C2 /* CircleOfDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleOfDots.swift; sourceTree = "<group>"; };
+		807E518F2BBD9DD400C7799E /* DenominatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominatorView.swift; sourceTree = "<group>"; };
+		8086218A2C80728A00C6EED6 /* click3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click3.wav; sourceTree = "<group>"; };
+		808621962C807BE100C6EED6 /* block4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block4.wav; sourceTree = "<group>"; };
+		808621972C807BE100C6EED6 /* block3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block3.wav; sourceTree = "<group>"; };
+		808621982C807BE200C6EED6 /* block1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block1.wav; sourceTree = "<group>"; };
+		808621992C807BE200C6EED6 /* block2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block2.wav; sourceTree = "<group>"; };
+		8086219E2C80815200C6EED6 /* InteractiveCapsulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCapsulesView.swift; sourceTree = "<group>"; };
+		808621A02C80816600C6EED6 /* FlashingCapsulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashingCapsulesView.swift; sourceTree = "<group>"; };
+		808621A22C80835600C6EED6 /* FlashingCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashingCapsule.swift; sourceTree = "<group>"; };
+		808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCapsule.swift; sourceTree = "<group>"; };
+		808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPresetNamePublisher.swift; sourceTree = "<group>"; };
+		8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		808E9C852C6105F700672D2A /* MetronomeIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MetronomeIcon.jpg; sourceTree = "<group>"; };
+		808E9C872C612F4300672D2A /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
+		808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MetronomeIconDark.jpg; sourceTree = "<group>"; };
+		8098C53B2BD7B6BF008F2F32 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
+		80A0404C2C5CEC75006CAF82 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		80C3081E2C90445A00CB5BBE /* ThemeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOption.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		805645872B1628EE00DB41B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		800ACCE32B402DAF009D0A72 /* Click */ = {
+			isa = PBXGroup;
+			children = (
+				800E75F22BE0F72000B79F6A /* click1.wav */,
+				800E75F42BE0F72000B79F6A /* click2.wav */,
+				8086218A2C80728A00C6EED6 /* click3.wav */,
+				800E75F52BE0F72000B79F6A /* click4.wav */,
+			);
+			path = Click;
+			sourceTree = "<group>";
+		};
+		80208DF82C5FA3AA0020FA56 /* CustomColorScheme */ = {
+			isa = PBXGroup;
+			children = (
+				80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */,
+				80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */,
+			);
+			path = CustomColorScheme;
+			sourceTree = "<group>";
+		};
+		803BAD252C739C5E004E3C39 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				80545A3D2C8706BD001A2881 /* ObjectBounds.swift */,
+				803BAD262C739C7C004E3C39 /* MetronomeConstants.swift */,
+				802C8A632C622284004DC3A4 /* AccentArrays.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		8042EFAC2C7004C200009256 /* AccentPresets */ = {
+			isa = PBXGroup;
+			children = (
+				8037D77A2C64FC53002BE46C /* AccentPresetMenuView.swift */,
+				803BAD1F2C733E4F004E3C39 /* AccentPresetMenuToolbar.swift */,
+				803BAD1D2C733C2D004E3C39 /* PresetListView.swift */,
+				803BAD212C7340C1004E3C39 /* ChangePresetNameAlert.swift */,
+				803BAD232C73419F004E3C39 /* ResetCurrentPresetsAlert.swift */,
+				803BAD2A2C74C25D004E3C39 /* AddNewPresetAlert.swift */,
+			);
+			path = AccentPresets;
+			sourceTree = "<group>";
+		};
+		80545A422C8851C5001A2881 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				80545A432C8851DF001A2881 /* TempoAndTimeSigEnum.swift */,
+				802B5FD62C8F439C006099BA /* HideHelperEnum.swift */,
+				802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */,
+				80C3081E2C90445A00CB5BBE /* ThemeOption.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		805645812B1628EE00DB41B9 = {
+			isa = PBXGroup;
+			children = (
+				8056458C2B1628EE00DB41B9 /* Metronome */,
+				8056458B2B1628EE00DB41B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8056458B2B1628EE00DB41B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8056458A2B1628EE00DB41B9 /* Metronome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8056458C2B1628EE00DB41B9 /* Metronome */ = {
+			isa = PBXGroup;
+			children = (
+				8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */,
+				803BAD252C739C5E004E3C39 /* Structs */,
+				80545A422C8851C5001A2881 /* Enums */,
+				80D6C3242B177C2200D49B7E /* Classes */,
+				80208DF82C5FA3AA0020FA56 /* CustomColorScheme */,
+				805645A42B163B4700DB41B9 /* Resources */,
+				805645912B1628F000DB41B9 /* Assets.xcassets */,
+				805645932B1628F000DB41B9 /* Preview Content */,
+				8056459B2B16290F00DB41B9 /* Views */,
+			);
+			path = Metronome;
+			sourceTree = "<group>";
+		};
+		805645932B1628F000DB41B9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				805645942B1628F000DB41B9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8056459B2B16290F00DB41B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8070DF752BB2C8E0004A8935 /* ContentView.swift */,
+				80545A3F2C885108001A2881 /* MetronomeView.swift */,
+				802C8A612C621FF5004DC3A4 /* TopScreenView.swift */,
+				808E9C872C612F4300672D2A /* SettingsMenuView.swift */,
+				808621A62C80837F00C6EED6 /* BeatView */,
+				8042EFAC2C7004C200009256 /* AccentPresets */,
+				8000D95B2B2C795D00004495 /* PlayView.swift */,
+				803646F42B30A5D400B63C64 /* TempoMarkingView.swift */,
+				8072636D2C8A021D004687C2 /* TempoView.swift */,
+				805FE6E92C8484730064D78E /* KnobView.swift */,
+				8072636F2C8A04C9004687C2 /* CircleOfDots.swift */,
+				8000D95D2B2C8E3200004495 /* TimeSigView.swift */,
+				807E518F2BBD9DD400C7799E /* DenominatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		805645A42B163B4700DB41B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				808E9C852C6105F700672D2A /* MetronomeIcon.jpg */,
+				808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */,
+				800ACCE32B402DAF009D0A72 /* Click */,
+				806714D62B402C4B00BA3162 /* Block */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		806714D62B402C4B00BA3162 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				808621982C807BE200C6EED6 /* block1.wav */,
+				808621992C807BE200C6EED6 /* block2.wav */,
+				808621972C807BE100C6EED6 /* block3.wav */,
+				808621962C807BE100C6EED6 /* block4.wav */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		808621A62C80837F00C6EED6 /* BeatView */ = {
+			isa = PBXGroup;
+			children = (
+				80379D252B2DA303008D7DC0 /* BeatView.swift */,
+				808621A02C80816600C6EED6 /* FlashingCapsulesView.swift */,
+				808621A22C80835600C6EED6 /* FlashingCapsule.swift */,
+				8086219E2C80815200C6EED6 /* InteractiveCapsulesView.swift */,
+				808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */,
+				8098C53B2BD7B6BF008F2F32 /* CapsuleView.swift */,
+			);
+			path = BeatView;
+			sourceTree = "<group>";
+		};
+		80D6C3242B177C2200D49B7E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */,
+				8037D7742C625B54002BE46C /* MetronomeTicker.swift */,
+				80208DD42C5E35F20020FA56 /* SettingsManager.swift */,
+				806771A92B31C0CE0037F296 /* ThemeManager.swift */,
+				803385AE2C5D3FC5009F0FC9 /* GradientManager.swift */,
+				80A0404C2C5CEC75006CAF82 /* SoundManager.swift */,
+				808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */,
+				805FE6ED2C84B8FD0064D78E /* TapTempo.swift */,
+				80545A3B2C85FFD3001A2881 /* Opacities.swift */,
+				80545A452C885203001A2881 /* ViewsManager.swift */,
+				80545A472C885621001A2881 /* DeviceScreen.swift */,
+				802B5FD22C8F19C8006099BA /* KnobController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		805645892B1628EE00DB41B9 /* Metronome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805645982B1628F000DB41B9 /* Build configuration list for PBXNativeTarget "Metronome" */;
+			buildPhases = (
+				805645862B1628EE00DB41B9 /* Sources */,
+				805645872B1628EE00DB41B9 /* Frameworks */,
+				805645882B1628EE00DB41B9 /* Resources */,
+				80B452FD2B31EA110064DE3E /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Metronome;
+			packageProductDependencies = (
+			);
+			productName = Metronome;
+			productReference = 8056458A2B1628EE00DB41B9 /* Metronome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		805645822B1628EE00DB41B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					805645892B1628EE00DB41B9 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 805645852B1628EE00DB41B9 /* Build configuration list for PBXProject "Metronome" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 805645812B1628EE00DB41B9;
+			packageReferences = (
+			);
+			productRefGroup = 8056458B2B1628EE00DB41B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				805645892B1628EE00DB41B9 /* Metronome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		805645882B1628EE00DB41B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805645952B1628F000DB41B9 /* Preview Assets.xcassets in Resources */,
+				800E75F62BE0F72000B79F6A /* click1.wav in Resources */,
+				805645922B1628F000DB41B9 /* Assets.xcassets in Resources */,
+				808E9C862C6105F700672D2A /* MetronomeIcon.jpg in Resources */,
+				8086219B2C807BE200C6EED6 /* block3.wav in Resources */,
+				8086219C2C807BE200C6EED6 /* block1.wav in Resources */,
+				800E75F92BE0F72000B79F6A /* click4.wav in Resources */,
+				808E9C8A2C6143F100672D2A /* MetronomeIconDark.jpg in Resources */,
+				8086219A2C807BE200C6EED6 /* block4.wav in Resources */,
+				800E75F82BE0F72000B79F6A /* click2.wav in Resources */,
+				8086218B2C80728A00C6EED6 /* click3.wav in Resources */,
+				8086219D2C807BE200C6EED6 /* block2.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		805645862B1628EE00DB41B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8072636E2C8A021D004687C2 /* TempoView.swift in Sources */,
+				80545A442C8851DF001A2881 /* TempoAndTimeSigEnum.swift in Sources */,
+				808E9C882C612F4300672D2A /* SettingsMenuView.swift in Sources */,
+				80208DFA2C5FA3BC0020FA56 /* CustomColorScheme.swift in Sources */,
+				8086FFE82B1FAA8500E6EBA0 /* Metronome.swift in Sources */,
+				8070DF762BB2C8E0004A8935 /* ContentView.swift in Sources */,
+				803BAD272C739C7C004E3C39 /* MetronomeConstants.swift in Sources */,
+				8098C53C2BD7B6BF008F2F32 /* CapsuleView.swift in Sources */,
+				808621A52C80835D00C6EED6 /* InteractiveCapsule.swift in Sources */,
+				80545A3E2C8706BD001A2881 /* ObjectBounds.swift in Sources */,
+				8086219F2C80815200C6EED6 /* InteractiveCapsulesView.swift in Sources */,
+				802B5FD92C8F43B2006099BA /* TempoChangeSpeedEnum.swift in Sources */,
+				80545A402C885108001A2881 /* MetronomeView.swift in Sources */,
+				807263702C8A04C9004687C2 /* CircleOfDots.swift in Sources */,
+				803BAD242C73419F004E3C39 /* ResetCurrentPresetsAlert.swift in Sources */,
+				80545A462C885203001A2881 /* ViewsManager.swift in Sources */,
+				808621AF2C81CED400C6EED6 /* NewPresetNamePublisher.swift in Sources */,
+				8000D95E2B2C8E3200004495 /* TimeSigView.swift in Sources */,
+				803BAD222C7340C1004E3C39 /* ChangePresetNameAlert.swift in Sources */,
+				80C3081F2C90445A00CB5BBE /* ThemeOption.swift in Sources */,
+				805FE6EA2C8484730064D78E /* KnobView.swift in Sources */,
+				805FE6EE2C84B8FE0064D78E /* TapTempo.swift in Sources */,
+				8037D77B2C64FC53002BE46C /* AccentPresetMenuView.swift in Sources */,
+				8056458E2B1628EE00DB41B9 /* MetronomeApp.swift in Sources */,
+				803BAD2B2C74C25D004E3C39 /* AddNewPresetAlert.swift in Sources */,
+				808621A12C80816600C6EED6 /* FlashingCapsulesView.swift in Sources */,
+				80545A482C885621001A2881 /* DeviceScreen.swift in Sources */,
+				803646F52B30A5D400B63C64 /* TempoMarkingView.swift in Sources */,
+				807E51902BBD9DD400C7799E /* DenominatorView.swift in Sources */,
+				80379D262B2DA303008D7DC0 /* BeatView.swift in Sources */,
+				803BAD1E2C733C2D004E3C39 /* PresetListView.swift in Sources */,
+				8000D95C2B2C795D00004495 /* PlayView.swift in Sources */,
+				803385AF2C5D3FC5009F0FC9 /* GradientManager.swift in Sources */,
+				802C8A642C622284004DC3A4 /* AccentArrays.swift in Sources */,
+				80A0404D2C5CEC75006CAF82 /* SoundManager.swift in Sources */,
+				808621A32C80835600C6EED6 /* FlashingCapsule.swift in Sources */,
+				803BAD202C733E4F004E3C39 /* AccentPresetMenuToolbar.swift in Sources */,
+				80208DD52C5E35F20020FA56 /* SettingsManager.swift in Sources */,
+				806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */,
+				8037D7752C625B54002BE46C /* MetronomeTicker.swift in Sources */,
+				802C8A622C621FF5004DC3A4 /* TopScreenView.swift in Sources */,
+				80208DFE2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift in Sources */,
+				802B5FD32C8F19C8006099BA /* KnobController.swift in Sources */,
+				802B5FD72C8F439C006099BA /* HideHelperEnum.swift in Sources */,
+				80545A3C2C85FFD3001A2881 /* Opacities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		805645962B1628F000DB41B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		805645972B1628F000DB41B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		805645992B1628F000DB41B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
+				DEVELOPMENT_TEAM = JCU9TG2F6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdconx.Metronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8056459A2B1628F000DB41B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
+				DEVELOPMENT_TEAM = JCU9TG2F6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdconx.Metronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		805645852B1628EE00DB41B9 /* Build configuration list for PBXProject "Metronome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805645962B1628F000DB41B9 /* Debug */,
+				805645972B1628F000DB41B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805645982B1628F000DB41B9 /* Build configuration list for PBXNativeTarget "Metronome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805645992B1628F000DB41B9 /* Debug */,
+				8056459A2B1628F000DB41B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 805645822B1628EE00DB41B9 /* Project object */;
+}
