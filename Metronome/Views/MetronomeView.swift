@@ -83,7 +83,7 @@ struct MetronomeView: View {
         .background(
             LinearGradient(gradient: Gradient(colors: [gradientManager.gradient ?? .clear, .clear]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea(.all)
-                .opacity(0.4)
+                .opacity(0.8)
         )
     }
     
@@ -127,7 +127,6 @@ struct MetronomeViewPreviews: PreviewProvider {
         let metronome = Metronome()
         
         let settingsManager = SettingsManager()
-        let themeManager = ThemeManager()
         let gradientManager = GradientManager()
         let soundManager = SoundManager()
         
@@ -138,7 +137,6 @@ struct MetronomeViewPreviews: PreviewProvider {
         MetronomeView()
             .environmentObject(metronome) // Provide the Metronome object to the environment
             .environmentObject(settingsManager)
-            .environmentObject(themeManager)
             .environmentObject(gradientManager)
             .environmentObject(soundManager)
             .environmentObject(opacities)

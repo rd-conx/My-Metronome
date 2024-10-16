@@ -2,21 +2,8 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "ios",
-        "reference" : "tintColor"
-      },
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "color" : {
-        "platform" : "tvos",
-        "reference" : "systemPinkColor"
+        "platform" : "universal",
+        "reference" : "systemBlueColor"
       },
       "idiom" : "universal"
     },
@@ -29,7 +16,7 @@
       ],
       "color" : {
         "platform" : "tvos",
-        "reference" : "systemPinkColor"
+        "reference" : "systemPurpleColor"
       },
       "idiom" : "universal"
     }
