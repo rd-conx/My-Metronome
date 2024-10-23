@@ -85,6 +85,7 @@ struct MetronomeView: View {
                 .ignoresSafeArea(.all)
                 .opacity(0.8)
         )
+        .ignoresSafeArea(.keyboard)
     }
     
     private func performShowAccentMenu() {

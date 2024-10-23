@@ -10,7 +10,6 @@ import SwiftUI
 let metronome = Metronome()
 
 let settingsManager = SettingsManager()
-let themeManager = ThemeManager()
 let gradientManager = GradientManager()
 let soundManager = SoundManager()
 let opacities = Opacities()
@@ -24,7 +23,6 @@ struct MetronomeApp: App {
             ContentView()
                 .environmentObject(metronome)
                 .environmentObject(settingsManager)
-                .environmentObject(themeManager)
                 .environmentObject(gradientManager)
                 .environmentObject(soundManager)
                 .environmentObject(opacities)

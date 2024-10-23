@@ -29,7 +29,9 @@ class Metronome: NSObject, ObservableObject {
     // Audio engine & processing
     var audioSession = AVAudioSession()
     var audioEngine = AVAudioEngine()
+    var mixerNode = AVAudioMixerNode()
     var playerNode = AVAudioPlayerNode()
+//    var outputMixer = AVAudioMixerNode()
     var sampleRate: Double = 0.0
     private let backgroundThread = DispatchQueue.global(qos: .userInitiated)
     
@@ -89,6 +91,9 @@ class Metronome: NSObject, ObservableObject {
         // Initialise Superclass (NSObject)
         super.init()
         
+        // for testing purposes
+//        UserDefaults.standard.reset()
+        
         // Set the audio session type
         backgroundThread.sync {
             self.audioSession = AVAudioSession.sharedInstance()
@@ -110,8 +115,16 @@ class Metronome: NSObject, ObservableObject {
         
         // Attach and connect engine and playerNode
         backgroundThread.sync {
+            // test
+            self.audioEngine.attach(self.mixerNode)
+            self.audioEngine.connect(self.mixerNode, to: self.audioEngine.mainMixerNode, format: format)
+            
             self.audioEngine.attach(self.playerNode)
-            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: format)
+//            self.audioEngine.connect(self.playerNode, to: self.audioEngine.outputNode, format: format)
+            self.audioEngine.connect(self.playerNode, to: self.mixerNode, format: format)
+            
+
+            
         }
 
         // load all click samples to memory
@@ -119,7 +132,7 @@ class Metronome: NSObject, ObservableObject {
         // NOTE: click samples need to be shorter than 0.15s
         /// (0.2s - shortest possible seconds per beat - at 300bpm) tempo extension to 400 0.15s shortest
         
-        // Load users choice of sound. Defaults to click if nothing saved
+        // Load users choice of sound. Defaults if nothing saved
         self.currentSound = settingsManager.clickSound.rawValue
         
         // Get stored accent preset values to limit the amount of accesses to computed properties withing settingsManager
@@ -259,6 +272,7 @@ class Metronome: NSObject, ObservableObject {
             }
         }
     }
+
     
     /*
      *** END SECTION ***
@@ -596,6 +610,7 @@ class Metronome: NSObject, ObservableObject {
     func changeChosenPreset(_ preset: AccentArray.Preset) {
         if let index = self.bufferAccents.currentPresets.firstIndex(where: { $0 == preset }) {
             self.userCurrentAccentConfig[String(timeSig[0])] = preset.array
+            settingsManager.userCurrentAccentConfig[String(timeSig[0])] = preset.array
             self.userChosenPresetVariations[self.timeSig[0]] = self.bufferAccents.currentPresets[index]
             // Store changed presets
             settingsManager.userChosenPresetVariations = self.userChosenPresetVariations
@@ -674,8 +689,7 @@ class Metronome: NSObject, ObservableObject {
         }
     }
     
-    
-    /// Starts the metronom
+    /// Starts the metronome
     func start() {
         
         self.backgroundThread.sync{
@@ -690,10 +704,15 @@ class Metronome: NSObject, ObservableObject {
         self.beatNumber = 0
         self.nextBeatSampleValue = 0
         self.bufferIndex = 0
-        
+        // set/reset output volume
+        self.mixerNode.outputVolume = 1.0
+
         self.syncQueue.sync() {
             self.scheduleBeats()
         }
+        
+
+        
     }
     
     /// Starts the metronome without reseting playback values (for use when setting tempo, with .fast enabled in tempo change settings)
@@ -780,18 +799,29 @@ class Metronome: NSObject, ObservableObject {
         }
     }
     
+    func fadeOut() {
+        let volumes: [Float] = [
+            0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0
+        ]
+        // fade volume out
+        for volume in volumes {
+            self.mixerNode.outputVolume = volume
+            usleep(10000)
+        }
+    }
+    
     /// Stops the metronome
     func stop() {
         
         self.isPlaying = false
+        self.playerStarted = false
         self.onTick?(0, 0)
-    
+        
+        fadeOut()
+
         self.playerNode.stop()
         self.playerNode.reset()
-    
         self.audioEngine.stop()
-    
-        self.playerStarted = false
     }
     
     /// Stops the metronome without stopping audio engine and resetting values. (for use when changing tempo)

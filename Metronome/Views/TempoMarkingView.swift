@@ -77,7 +77,7 @@ struct TempoMarkingView: View {
                             isTempoInputActive = false
                             submitTempoChoice(self.tempoField)
                             withAnimation(.easeInOut(duration: 0.5)) {
-                                opacities.tempoView = 1
+//                                opacities.tempoView = 1
                                 opacities.tempoOrTimeSigSelector = 1
                             }
                         }
@@ -86,7 +86,7 @@ struct TempoMarkingView: View {
                 .onChange(of: isTempoInputActive) {
                     if isTempoInputActive == true {
                         withAnimation(.easeInOut(duration: 0.3)) {
-                            opacities.tempoView = 0
+//                            opacities.tempoView = 0
                             opacities.tempoOrTimeSigSelector = 0
                         }
                     }

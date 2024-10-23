@@ -30,13 +30,13 @@ struct MetronomeConstants {
     static let PLAY_BUTTON = "play.fill"
     static let STOP_BUTTON = "stop.fill"
 
-    static let DEFAULT_CLICK_NAME = "click"
+    static let DEFAULT_CLICK_NAME = "block"
     static let DEFAULT_CLICK_DISPLAY_NAME = {
         let firstLetter = DEFAULT_CLICK_NAME.prefix(1).capitalized
         let remainingLetters = DEFAULT_CLICK_NAME.dropFirst().lowercased()
         return firstLetter + remainingLetters + " (default)"
     }
-    static let SECONDARY_CLICK_NAME = "block"
+    static let SECONDARY_CLICK_NAME = "click"
     static let SECONDARY_CLICK_DISPLAY_NAME = {
         let firstLetter = SECONDARY_CLICK_NAME.prefix(1).capitalized
         let remainingLetters = SECONDARY_CLICK_NAME.dropFirst().lowercased()

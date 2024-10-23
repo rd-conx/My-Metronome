@@ -15,6 +15,8 @@ struct TopScreenView: View {
     @EnvironmentObject private var settingsManager: SettingsManager
     @EnvironmentObject var deviceScreen: DeviceScreen
     
+    @State private var showInfoModal: Bool = false
+    
     var body: some View {
         
         let textColor: Color = colorScheme == .light ? .black : .white
@@ -30,6 +32,10 @@ struct TopScreenView: View {
                 Image(systemName: "metronome")
                     .font(.system(size: 40, weight: .regular))
                     .padding(10)
+                    .onTapGesture {
+                        showInfoModal = true
+                    }
+                    .fullScreenCover(isPresented: $showInfoModal, content: FullScreenModalView.init)
                 Spacer()
             }
             HStack {
@@ -46,6 +52,45 @@ struct TopScreenView: View {
                         .opacity(settingsManager.hideHelper == true ? 0.0 : 1.0)
                 }
                 .disabled(settingsManager.hideHelper)
+            }
+        }
+    }
+}
+
+
+struct FullScreenModalView: View {
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
+    
+    let webLink = "http://localhost:3000"
+    
+    var body: some View {
+        ZStack {
+            Color.appBackground.edgesIgnoringSafeArea(.all)
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        dismiss()
+                    }, label: {
+                        Image(systemName: "x.circle")
+                            .tint(.red)
+                    })
+                    .padding(20)
+                }
+                Spacer()
+                Text("My Metronome")
+                Text("Version 1.0")
+                    .font(.system(size: 13))
+                    .padding(.bottom, 10)
+                Text("Developed by Ross Conquer")
+                Button("Visit my website") {
+                    if let url = URL(string: webLink) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+                Spacer()
+                Spacer()
             }
         }
     }

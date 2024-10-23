@@ -13,9 +13,10 @@ struct SettingsMenuView: View {
     @EnvironmentObject var gradientManager: GradientManager
     @EnvironmentObject var soundManager: SoundManager
     
-    @State var selectedTheme: CustomColorScheme = CustomColorScheme.defaultValue
+//    @State var selectedTheme: CustomColorScheme = CustomColorScheme.defaultValue
+    @State var selectedTheme: ColorScheme = .light
     @State var selectedGradient: Color = .clear
-    @State var selectedSound: SoundOption = .click
+    @State var selectedSound: SoundOption = .defaultValue
     @State var selectedHelperOption: HideHelperOptions = .show
     @State var selectedTempoChangeSpeedOption: TempoChangeSpeedOptions = .normal
     
@@ -33,24 +34,26 @@ struct SettingsMenuView: View {
         Menu {
             Menu {
                 Picker("Theme", selection: $selectedTheme) {
-                    Text("System (default)").tag(CustomColorScheme.system)
-                    Text("Light").tag(CustomColorScheme.light)
-                    Text("Dark").tag(CustomColorScheme.dark)
+//                    Text("System (default)").tag(CustomColorScheme.system)
+                    Text("Light").tag(ColorScheme.light)
+                    Text("Dark").tag(ColorScheme.dark)
                 }
                 .onAppear {
-                    selectedTheme = settingsManager.customColorScheme
+                    guard let theme = settingsManager.chosenColorScheme else {
+                        selectedTheme = DEFAULT_THEME
+                        return
+                    }
+                    selectedTheme = theme
                 }
                 .onChange(of: selectedTheme) { oldValue, newValue in
-                    settingsManager.customColorScheme = newValue
-                    settingsManager.setColorSchemeToStore()
+                    settingsManager.chosenColorScheme = newValue
+                    print(newValue)
+                    settingsManager.storeColorScheme()
                     
                     // Gradient
                     gradientManager.setGradient(gradient: gradientManager.decideGradient())
-                    print("gradient: \(gradientManager.gradient ?? .clear)")
+//                    print("gradient: \(gradientManager.gradient ?? .clear)")
                     selectedGradient = gradientManager.gradient ?? .clear
-                }
-                .onChange(of: settingsManager.customColorScheme) { oldValue, newValue in
-                    selectedTheme = newValue
                 }
             } label: {
                 Label("Theme", systemImage: "globe.europe.africa.fill")
@@ -69,14 +72,19 @@ struct SettingsMenuView: View {
                 .onChange(of: selectedGradient) {
                     gradientManager.setGradient(gradient: selectedGradient)
                 }
+                .onChange(of: gradientManager.gradient) {
+                    if let gradient = gradientManager.gradient {
+                        selectedGradient = gradient
+                    }
+                }
             } label: {
                 Label("Colour", systemImage: "paintpalette.fill")
             }
 
             Menu {
                 Picker("Sound", selection: $selectedSound) {
-                    Text(MetronomeConstants.DEFAULT_CLICK_DISPLAY_NAME()).tag(SoundOption.click)
-                    Text(MetronomeConstants.SECONDARY_CLICK_DISPLAY_NAME()).tag(SoundOption.block)
+                    Text(MetronomeConstants.DEFAULT_CLICK_DISPLAY_NAME()).tag(SoundOption.block)
+                    Text(MetronomeConstants.SECONDARY_CLICK_DISPLAY_NAME()).tag(SoundOption.click)
                 }
                 .onAppear {
                     selectedSound = soundManager.getCurrentClickSound()
@@ -121,6 +129,9 @@ struct SettingsMenuView: View {
             .onChange(of: selectedHelperOption) {
                 settingsManager.setHelperOption(selectedHelperOption)
             }
+            .onChange(of: settingsManager.hideHelper) { oldValue, newValue in
+                selectedHelperOption = newValue == true ? .hide : .show
+            }
             
             Menu {
                 Picker("Tempo Change", selection: self.$selectedTempoChangeSpeedOption) {
@@ -161,7 +172,7 @@ struct SettingsMenuView: View {
                     Text("Reset")
                 }
             } message: {
-                Text("Are you sure you want to reset all settings to default?\nThis will not remove any saved presets.")
+                Text("Are you sure?\nThis will not remove any saved presets.")
             }
     }
 }

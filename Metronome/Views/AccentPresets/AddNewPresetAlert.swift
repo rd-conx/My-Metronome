@@ -19,9 +19,11 @@ struct AddNewPresetAlert: View {
     
     var body: some View {
         
+        let foregroundColor = colorScheme == .dark ? Color.white : Color.black
+        
         VStack {
             TextField("\(newPresetNamePublisher.newPresetName)", text: $newPresetNamePublisher.newPresetName)
-                .foregroundStyle(.black)
+                .foregroundStyle(foregroundColor)
             HStack {
                 Button("Cancel", action: {
                     showPresetAddAlert = false

@@ -44,10 +44,10 @@ struct AccentPresetMenuView: View {
             }, message: {
                 Text("Renaming '\(presetToEdit)'")
             })
-            .alert("Reset current presets", isPresented: $presentPresetResetAlert, actions: {
+            .alert("Reset presets", isPresented: $presentPresetResetAlert, actions: {
                 ResetCurrentPresetsAlert(presentPresetResetAlert: $presentPresetResetAlert)
             }, message: {
-                Text("Reset all presets for this time signature?\nThis action cannot be undone!")
+                Text("This action is irreversible!")
             })
             .alert("Preset '\(nameOfPresetThatExists)' already uses the current beat accent configuration", isPresented: $showPresetAlreadyExistsAlert, actions: {
                 Button("Ok") { showPresetAlreadyExistsAlert = false }

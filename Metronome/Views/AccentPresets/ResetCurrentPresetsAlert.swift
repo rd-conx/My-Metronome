@@ -19,7 +19,7 @@ struct ResetCurrentPresetsAlert: View {
         Button("Cancel", action: {
             presentPresetResetAlert = false
         })
-        Button("This Time Signature", action: {
+        Button("For This Time Signature", action: {
             resetCurrentTimeSigPresets()
         })
         Button("For all Time Signatures", action: {

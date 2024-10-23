@@ -6,26 +6,51 @@
 //
 
 import Foundation
-import SwiftUI 
+import SwiftUI
+
+let DEFAULT_THEME: ColorScheme = .light
+
+extension UserDefaults {
+    
+    enum Keys: String, CaseIterable {
+        
+        case appTheme = "AppTheme"
+        case gradientLight = "GradientLight"
+        case gradientDark = "GradientDark"
+        case sound = "ClickSound"
+        case helper = "Helper"
+        case currentAccents = "CurrentAccents"
+        case accentPresets = "AccentPresets"
+        case chosenPresets = "ChosenPresets"
+        case timeSignature = "TimeSignature"
+        case tempo = "Tempo"
+        case tempoChangeFromSlow = "TempoChangeFromSlow"
+    }
+    
+    func reset() {
+        Keys.allCases.forEach { removeObject(forKey: $0.rawValue)}
+    }
+}
+
 
 class SettingsManager: ObservableObject {
     
     private let backgroundThread = DispatchQueue.global(qos: .userInitiated)
     
     private let defaults = UserDefaults.standard
-    private let THEME_KEY = "AppTheme"
-    private let GRADIENT_LIGHT_KEY = "GradientLight"
-    private let GRADIENT_DARK_KEY = "GradientDark"
-    private let SOUND_KEY = "ClickSound"
-    private let HELPER_KEY = "Helper"
-    private let CURRENT_ACCENTS = "CurrentAccents"
-    private let ACCENT_PRESETS_KEY = "AccentPresets"
-    private let CHOSEN_PRESETS_KEY = "ChosenPresets"
-    private let TIME_SIG_KEY = "TimeSignature"
-    private let TEMPO_KEY = "Tempo"
-    private let TEMPO_CHANGE_FROM_SLOW = "slowTempoChange"
+    private let THEME_KEY = UserDefaults.Keys.appTheme.rawValue
+    private let GRADIENT_LIGHT_KEY = UserDefaults.Keys.gradientLight.rawValue
+    private let GRADIENT_DARK_KEY = UserDefaults.Keys.gradientDark.rawValue
+    private let SOUND_KEY = UserDefaults.Keys.sound.rawValue
+    private let HELPER_KEY = UserDefaults.Keys.helper.rawValue
+    private let CURRENT_ACCENTS = UserDefaults.Keys.currentAccents.rawValue
+    private let ACCENT_PRESETS_KEY = UserDefaults.Keys.accentPresets.rawValue
+    private let CHOSEN_PRESETS_KEY = UserDefaults.Keys.chosenPresets.rawValue
+    private let TIME_SIG_KEY = UserDefaults.Keys.timeSignature.rawValue
+    private let TEMPO_KEY = UserDefaults.Keys.tempo.rawValue
+    private let TEMPO_CHANGE_FROM_SLOW = UserDefaults.Keys.tempoChangeFromSlow.rawValue
     
-    @Published var customColorScheme: CustomColorScheme = CustomColorScheme.defaultValue
+    @Published var chosenColorScheme: ColorScheme? = nil
     
     @Published var hideHelper: Bool = false
     @Published var tempoChangeFast: Bool = false
@@ -36,14 +61,17 @@ class SettingsManager: ObservableObject {
         tempoChangeFast = getStoredTempoSpeedOption() == .fast ? true : false
     }
     
-    func processThemeButton(_ colorScheme: CustomColorScheme) {
-        self.customColorScheme = colorScheme
-        self.setColorSchemeToStore()
-        gradientManager.setGradient(gradient: gradientManager.decideGradient())
+    func storeColorScheme() {
+        defaults.set(chosenColorScheme == .light ? "light" : "dark", forKey: THEME_KEY)
     }
     
-    func setColorSchemeToStore() {
-        defaults.set(customColorScheme.rawValue, forKey: CustomColorScheme.defaultKey)
+    func getStoredColorScheme() {
+        guard let rawValue: String = defaults.string(forKey: THEME_KEY) else {
+            print("Color Scheme not stored, or error occurred. Defaulting to \(DEFAULT_THEME)")
+            chosenColorScheme = DEFAULT_THEME
+            return
+        }
+        chosenColorScheme = rawValue == "dark" ? ColorScheme.dark : ColorScheme.light
     }
     
     func getStoredHelperOption() -> HideHelperOptions {
@@ -54,14 +82,6 @@ class SettingsManager: ObservableObject {
         self.hideHelper = helperOption == .hide ? true : false
         defaults.set(helperOption.rawValue, forKey: HELPER_KEY)
     }
-
-    
-    func getStoredColorScheme() {
-        let rawValue: Int = defaults.integer(forKey: CustomColorScheme.defaultKey)
-        customColorScheme = CustomColorScheme(rawValue: rawValue) ?? CustomColorScheme.defaultValue
-    }
-    
-
    
     var gradientLight: Color {
         get { return stringToColor[defaults.string(forKey: GRADIENT_LIGHT_KEY) ?? "clear"]! }
@@ -74,7 +94,7 @@ class SettingsManager: ObservableObject {
     }
     
     var clickSound: SoundOption {
-        get { return SoundOption(rawValue: defaults.string(forKey: SOUND_KEY) ?? "click")! }
+        get { return SoundOption(rawValue: defaults.string(forKey: SOUND_KEY) ?? SoundOption.defaultValue.rawValue)! }
         set { defaults.set(newValue.rawValue, forKey: SOUND_KEY) }
     }
     
@@ -169,6 +189,7 @@ class SettingsManager: ObservableObject {
                 do {
                     let encodedPresets = try JSONEncoder().encode(newValue)
                     self.defaults.set(encodedPresets, forKey: self.CHOSEN_PRESETS_KEY)
+//                    print("set new chosenPresetVariation: \(newValue[12]!.array)")
                 } catch {
                     print("Failed to encode chosenPresetVariation.")
                 }
@@ -213,11 +234,7 @@ class SettingsManager: ObservableObject {
         if metronome.isPlaying {
             metronome.pressPlayStopButton()
         }
-                
-        // Reset theme
-        customColorScheme = CustomColorScheme.defaultValue
-        setColorSchemeToStore()
-        
+       
         // Reset Colour
         self.gradientLight = .clear
         self.gradientDark = .clear
@@ -227,18 +244,14 @@ class SettingsManager: ObservableObject {
         soundManager.setCurrentSound(clickSoundChoice: SoundOption.defaultValue)
         
         // Reset Helper
-//        self.hideHelper = false
         setHelperOption(HideHelperOptions.show)
-//        setHelperOption()
         
         setTempoChangeSpeedOption(.normal)
         
         // set load default click set
         metronome.initClickSet(clickSetName: MetronomeConstants.DEFAULT_CLICK_NAME)
         
-        // check 
         metronome.checkArrayCopyOfSaved()
-        
     }
     
     private let colorToString: [Color: String] = [

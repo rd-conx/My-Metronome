@@ -9,13 +9,13 @@ import Foundation
 
 struct AccentArray {
     static let LENGTH = 16
-    static let ACCEPTABLE_RANGE: Range = 0..<16
+    static let ACCEPTABLE_RANGE: Range = 0..<LENGTH
     static let OPTIONS = ["1": "1", "2": "2", "3": "3", "4": "4"]
     static let DEFAULT_SETTINGS = [
-        "1","3","3","3",
-        "3","3","3","3",
-        "3","3","3","3",
-        "3","3","3","3",
+        "1","2","2","2",
+        "2","2","2","2",
+        "2","2","2","2",
+        "2","2","2","2",
     ]
     
     var chosenPreset: Int = 0
@@ -24,7 +24,6 @@ struct AccentArray {
     struct Preset: Identifiable, Hashable, Codable {
         var defaultPreset = false
         var orderIndex = 0
-//        var chosen = false
         var id = UUID()
 
         var name: String
@@ -83,47 +82,47 @@ struct AccentArray {
             Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         2: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         3: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Descending", array: ["1", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Ascending", array: ["1", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         4: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "One & Three", array: ["1", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Two & Four", array: ["3", "2", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Two & Four alt", array: ["4", "2", "4", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         5: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Three-Two", array: ["1", "3", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Two-Three", array: ["1", "3", "2", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         6: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Three-Three", array: ["1", "3", "3", "2", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         7: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Three-Four", array: ["1", "3", "3", "2", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Four-Three", array: ["1", "3", "3", "3", "2", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         8: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "On Four", array: ["1", "3", "3", "3", "2", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "4", "4", "4", "4", "4", "4", "4", "4"])
         ],
         9: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Every Three", array: ["1", "3", "3", "2", "3", "3", "2", "3", "3", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Four-Five", array: ["1", "3", "3", "3", "2", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Five-Four", array: ["1", "3", "3", "3", "3", "2", "3", "3", "3", "4", "4", "4", "4", "4", "4", "4"]),
@@ -131,47 +130,47 @@ struct AccentArray {
             Preset(orderIndex: 5, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4", "4"])
         ],
         10: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "On Five", array: ["1", "3", "3", "3", "3", "2", "3", "3", "3", "3", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "4", "4", "4", "4", "4", "4"])
         ],
         11: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Five-Six", array: ["1", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Six-Five", array: ["1", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "4", "4", "4", "4", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4", "4"])
         ],
         12: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "On Six", array: ["1", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "4", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Every Three", array: ["1", "3", "3", "2", "3", "3", "2", "3", "3", "2", "3", "3", "4", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "4", "4", "4", "4"])
         ],
         13: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4", "4"]),
             Preset(orderIndex: 1, name: "Six-Seven", array: ["1", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "3", "4", "4", "4"]),
             Preset(orderIndex: 2, name: "Seven-Six", array: ["1", "3", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "4", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "4", "4", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4", "4"])
         ],
         14: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4", "4"]),
             Preset(orderIndex: 1, name: "On Seven", array: ["1", "3", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "3", "4", "4"]),
             Preset(orderIndex: 2, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4"]),
             Preset(orderIndex: 3, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4", "4"])
         ],
         15: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "4"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "4"]),
             Preset(orderIndex: 1, name: "Seven-Eight", array: ["1", "3", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "3", "3", "4"]),
             Preset(orderIndex: 2, name: "Eight-Seven", array: ["1", "3", "3", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "3", "4"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "4"]),
             Preset(orderIndex: 4, name: "Every Two alt", array: ["1", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "4"])
         ],
         16: [
-            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3"]),
+            Preset(defaultPreset: true, orderIndex: 0, name: "Default", array: ["1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2"]),
             Preset(orderIndex: 1, name: "On Eight", array: ["1", "3", "3", "3", "3", "3", "3", "3", "2", "3", "3", "3", "3", "3", "3", "3"]),
             Preset(orderIndex: 2, name: "Every Four", array: ["1", "3", "3", "3", "2", "3", "3", "3", "2", "3", "3", "3", "2", "3", "3", "3"]),
             Preset(orderIndex: 3, name: "Every Two", array: ["1", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3", "2", "3"]),

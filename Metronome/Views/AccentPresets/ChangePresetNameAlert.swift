@@ -19,6 +19,8 @@ struct ChangePresetNameAlert: View {
     
     var body: some View {
         
+        let foregroundColor = colorScheme == .dark ? Color.white : Color.black
+        
         ScrollView {
             TextField("\(presetToEdit)", text: Binding<String>(
                 get: {
@@ -28,7 +30,7 @@ struct ChangePresetNameAlert: View {
                     givenPresetName = newValue
                 }
                 ))
-            .foregroundStyle(.black)
+            .foregroundStyle(foregroundColor)
             Button("Cancel", action: {
                 resetEditingState()
             })

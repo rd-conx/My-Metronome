@@ -13,8 +13,6 @@
 		800E75F82BE0F72000B79F6A /* click2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 800E75F42BE0F72000B79F6A /* click2.wav */; };
 		800E75F92BE0F72000B79F6A /* click4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 800E75F52BE0F72000B79F6A /* click4.wav */; };
 		80208DD52C5E35F20020FA56 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DD42C5E35F20020FA56 /* SettingsManager.swift */; };
-		80208DFA2C5FA3BC0020FA56 /* CustomColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */; };
-		80208DFE2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */; };
 		802B5FD32C8F19C8006099BA /* KnobController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD22C8F19C8006099BA /* KnobController.swift */; };
 		802B5FD72C8F439C006099BA /* HideHelperEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD62C8F439C006099BA /* HideHelperEnum.swift */; };
 		802B5FD92C8F43B2006099BA /* TempoChangeSpeedEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */; };
@@ -33,7 +31,6 @@
 		803BAD2B2C74C25D004E3C39 /* AddNewPresetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BAD2A2C74C25D004E3C39 /* AddNewPresetAlert.swift */; };
 		80545A3C2C85FFD3001A2881 /* Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3B2C85FFD3001A2881 /* Opacities.swift */; };
 		80545A3E2C8706BD001A2881 /* ObjectBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3D2C8706BD001A2881 /* ObjectBounds.swift */; };
-		80545A402C885108001A2881 /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A3F2C885108001A2881 /* MetronomeView.swift */; };
 		80545A442C8851DF001A2881 /* TempoAndTimeSigEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A432C8851DF001A2881 /* TempoAndTimeSigEnum.swift */; };
 		80545A462C885203001A2881 /* ViewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A452C885203001A2881 /* ViewsManager.swift */; };
 		80545A482C885621001A2881 /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545A472C885621001A2881 /* DeviceScreen.swift */; };
@@ -43,11 +40,11 @@
 		805EF0452C9F460A001B390C /* sizeVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805EF0442C9F4600001B390C /* sizeVariables.swift */; };
 		805FE6EA2C8484730064D78E /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6E92C8484730064D78E /* KnobView.swift */; };
 		805FE6EE2C84B8FE0064D78E /* TapTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FE6ED2C84B8FD0064D78E /* TapTempo.swift */; };
-		806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806771A92B31C0CE0037F296 /* ThemeManager.swift */; };
 		8070DF762BB2C8E0004A8935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070DF752BB2C8E0004A8935 /* ContentView.swift */; };
 		8072636E2C8A021D004687C2 /* TempoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072636D2C8A021D004687C2 /* TempoView.swift */; };
 		807263702C8A04C9004687C2 /* CircleOfDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072636F2C8A04C9004687C2 /* CircleOfDots.swift */; };
 		807E51902BBD9DD400C7799E /* DenominatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E518F2BBD9DD400C7799E /* DenominatorView.swift */; };
+		808160E52CBFC070000528F5 /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808160E42CBFC070000528F5 /* MetronomeView.swift */; };
 		8086218B2C80728A00C6EED6 /* click3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8086218A2C80728A00C6EED6 /* click3.wav */; };
 		8086219A2C807BE200C6EED6 /* block4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621962C807BE100C6EED6 /* block4.wav */; };
 		8086219B2C807BE200C6EED6 /* block3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 808621972C807BE100C6EED6 /* block3.wav */; };
@@ -87,8 +84,6 @@
 		800E75F42BE0F72000B79F6A /* click2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click2.wav; sourceTree = "<group>"; };
 		800E75F52BE0F72000B79F6A /* click4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click4.wav; sourceTree = "<group>"; };
 		80208DD42C5E35F20020FA56 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = Metronome/Classes/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
-		80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorScheme.swift; sourceTree = "<group>"; };
-		80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorSchemeViewModifier.swift; sourceTree = "<group>"; };
 		802B5FD22C8F19C8006099BA /* KnobController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobController.swift; sourceTree = "<group>"; };
 		802B5FD62C8F439C006099BA /* HideHelperEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideHelperEnum.swift; sourceTree = "<group>"; };
 		802B5FD82C8F43B2006099BA /* TempoChangeSpeedEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoChangeSpeedEnum.swift; sourceTree = "<group>"; };
@@ -107,7 +102,6 @@
 		803BAD2A2C74C25D004E3C39 /* AddNewPresetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPresetAlert.swift; sourceTree = "<group>"; };
 		80545A3B2C85FFD3001A2881 /* Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opacities.swift; sourceTree = "<group>"; };
 		80545A3D2C8706BD001A2881 /* ObjectBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectBounds.swift; path = Metronome/Structs/ObjectBounds.swift; sourceTree = SOURCE_ROOT; };
-		80545A3F2C885108001A2881 /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetronomeView.swift; path = ScreenSizeViews/MetronomeView.swift; sourceTree = "<group>"; };
 		80545A432C8851DF001A2881 /* TempoAndTimeSigEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoAndTimeSigEnum.swift; sourceTree = "<group>"; };
 		80545A452C885203001A2881 /* ViewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsManager.swift; sourceTree = "<group>"; };
 		80545A472C885621001A2881 /* DeviceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreen.swift; sourceTree = "<group>"; };
@@ -118,11 +112,12 @@
 		805EF0442C9F4600001B390C /* sizeVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizeVariables.swift; sourceTree = "<group>"; };
 		805FE6E92C8484730064D78E /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
 		805FE6ED2C84B8FD0064D78E /* TapTempo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapTempo.swift; sourceTree = "<group>"; };
-		806771A92B31C0CE0037F296 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		8070DF752BB2C8E0004A8935 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8072636D2C8A021D004687C2 /* TempoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoView.swift; sourceTree = "<group>"; };
 		8072636F2C8A04C9004687C2 /* CircleOfDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleOfDots.swift; sourceTree = "<group>"; };
 		807E518F2BBD9DD400C7799E /* DenominatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominatorView.swift; sourceTree = "<group>"; };
+		808160E42CBFC070000528F5 /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
+		808160E62CC7ACC8000528F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8086218A2C80728A00C6EED6 /* click3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click3.wav; sourceTree = "<group>"; };
 		808621962C807BE100C6EED6 /* block4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block4.wav; sourceTree = "<group>"; };
 		808621972C807BE100C6EED6 /* block3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = block3.wav; sourceTree = "<group>"; };
@@ -162,15 +157,6 @@
 				800E75F52BE0F72000B79F6A /* click4.wav */,
 			);
 			path = Click;
-			sourceTree = "<group>";
-		};
-		80208DF82C5FA3AA0020FA56 /* CustomColorScheme */ = {
-			isa = PBXGroup;
-			children = (
-				80208DF92C5FA3BC0020FA56 /* CustomColorScheme.swift */,
-				80208DFD2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift */,
-			);
-			path = CustomColorScheme;
 			sourceTree = "<group>";
 		};
 		803BAD252C739C5E004E3C39 /* Structs */ = {
@@ -227,11 +213,11 @@
 		8056458C2B1628EE00DB41B9 /* Metronome */ = {
 			isa = PBXGroup;
 			children = (
+				808160E62CC7ACC8000528F5 /* Info.plist */,
 				8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */,
 				803BAD252C739C5E004E3C39 /* Structs */,
 				80545A422C8851C5001A2881 /* Enums */,
 				80D6C3242B177C2200D49B7E /* Classes */,
-				80208DF82C5FA3AA0020FA56 /* CustomColorScheme */,
 				805645A42B163B4700DB41B9 /* Resources */,
 				805645912B1628F000DB41B9 /* Assets.xcassets */,
 				805645932B1628F000DB41B9 /* Preview Content */,
@@ -252,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				8070DF752BB2C8E0004A8935 /* ContentView.swift */,
-				80545A3F2C885108001A2881 /* MetronomeView.swift */,
+				808160E42CBFC070000528F5 /* MetronomeView.swift */,
 				802C8A612C621FF5004DC3A4 /* TopScreenView.swift */,
 				808E9C872C612F4300672D2A /* SettingsMenuView.swift */,
 				808621A62C80837F00C6EED6 /* BeatView */,
@@ -309,7 +295,6 @@
 				8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */,
 				8037D7742C625B54002BE46C /* MetronomeTicker.swift */,
 				80208DD42C5E35F20020FA56 /* SettingsManager.swift */,
-				806771A92B31C0CE0037F296 /* ThemeManager.swift */,
 				803385AE2C5D3FC5009F0FC9 /* GradientManager.swift */,
 				80A0404C2C5CEC75006CAF82 /* SoundManager.swift */,
 				808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */,
@@ -353,7 +338,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					805645892B1628EE00DB41B9 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -410,7 +395,7 @@
 				8072636E2C8A021D004687C2 /* TempoView.swift in Sources */,
 				80545A442C8851DF001A2881 /* TempoAndTimeSigEnum.swift in Sources */,
 				808E9C882C612F4300672D2A /* SettingsMenuView.swift in Sources */,
-				80208DFA2C5FA3BC0020FA56 /* CustomColorScheme.swift in Sources */,
+				808160E52CBFC070000528F5 /* MetronomeView.swift in Sources */,
 				8086FFE82B1FAA8500E6EBA0 /* Metronome.swift in Sources */,
 				8070DF762BB2C8E0004A8935 /* ContentView.swift in Sources */,
 				803BAD272C739C7C004E3C39 /* MetronomeConstants.swift in Sources */,
@@ -419,7 +404,6 @@
 				80545A3E2C8706BD001A2881 /* ObjectBounds.swift in Sources */,
 				8086219F2C80815200C6EED6 /* InteractiveCapsulesView.swift in Sources */,
 				802B5FD92C8F43B2006099BA /* TempoChangeSpeedEnum.swift in Sources */,
-				80545A402C885108001A2881 /* MetronomeView.swift in Sources */,
 				807263702C8A04C9004687C2 /* CircleOfDots.swift in Sources */,
 				803BAD242C73419F004E3C39 /* ResetCurrentPresetsAlert.swift in Sources */,
 				80545A462C885203001A2881 /* ViewsManager.swift in Sources */,
@@ -446,10 +430,8 @@
 				805EF0452C9F460A001B390C /* sizeVariables.swift in Sources */,
 				803BAD202C733E4F004E3C39 /* AccentPresetMenuToolbar.swift in Sources */,
 				80208DD52C5E35F20020FA56 /* SettingsManager.swift in Sources */,
-				806771AA2B31C0CE0037F296 /* ThemeManager.swift in Sources */,
 				8037D7752C625B54002BE46C /* MetronomeTicker.swift in Sources */,
 				802C8A622C621FF5004DC3A4 /* TopScreenView.swift in Sources */,
-				80208DFE2C5FA4100020FA56 /* CustomColorSchemeViewModifier.swift in Sources */,
 				802B5FD32C8F19C8006099BA /* KnobController.swift in Sources */,
 				802B5FD72C8F439C006099BA /* HideHelperEnum.swift in Sources */,
 				80545A3C2C85FFD3001A2881 /* Opacities.swift in Sources */,
@@ -583,7 +565,6 @@
 		805645992B1628F000DB41B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -592,6 +573,7 @@
 				DEVELOPMENT_TEAM = JCU9TG2F6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Metronome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -618,7 +600,6 @@
 		8056459A2B1628F000DB41B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +608,7 @@
 				DEVELOPMENT_TEAM = JCU9TG2F6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Metronome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

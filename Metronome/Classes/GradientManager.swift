@@ -26,11 +26,11 @@ class GradientManager: ObservableObject {
     
     var listToUse: [Color] {
         get {
-            var colorScheme: CustomColorScheme = .light
-            if settingsManager.customColorScheme == CustomColorScheme.system {
-                colorScheme = UITraitCollection.current.userInterfaceStyle == .light ? CustomColorScheme.light : CustomColorScheme.dark
+            var colorScheme: ColorScheme = .light
+            if settingsManager.chosenColorScheme == nil {
+                colorScheme = UITraitCollection.current.userInterfaceStyle == .light ? ColorScheme.light : ColorScheme.dark
             } else {
-                colorScheme = settingsManager.customColorScheme
+                colorScheme = settingsManager.chosenColorScheme!
             }
             return colorScheme == .light ? lightThemeGradients : darkThemeGradients
         }

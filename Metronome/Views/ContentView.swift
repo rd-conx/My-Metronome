@@ -14,32 +14,25 @@ struct ContentView: View {
     @EnvironmentObject var gradientManager: GradientManager
     @EnvironmentObject var deviceScreen: DeviceScreen
     
-    @Environment(\.colorScheme) private var colorScheme
-    
-//    @State private var deviceScreen = DeviceScreen()
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
         GeometryReader { geo in
             MetronomeView()
-            .customColorScheme($settingsManager.customColorScheme)
-            .tint(gradientManager.gradient == .clear ? (colorScheme == .light ? .black : .white) : gradientManager.gradient)
+                .preferredColorScheme(settingsManager.chosenColorScheme)
             .onAppear {
                 self.deviceScreen.processSize(geo.size)
-//                self.deviceScreen.size = geo.size
                 metronome.deviceScreenSize = geo.size
                 metronome.updateCapsuleWidths()
-//                print(geo.size)
             }
             .onChange(of : geo.size) {
-//                self.deviceScreen.size = geo.size
                 self.deviceScreen.processSize(geo.size)
                 metronome.deviceScreenSize = geo.size
                 metronome.updateCapsuleWidths()
-//                print(geo.size)
             }
-//            .environmentObject(deviceScreen)
         }
+        .background(.appBackground)
     }
 }
 
@@ -50,7 +43,6 @@ struct ContentViewPreviews: PreviewProvider {
         let metronome = Metronome()
         
         let settingsManager = SettingsManager()
-        let themeManager = ThemeManager()
         let gradientManager = GradientManager()
         let soundManager = SoundManager()
         
@@ -60,7 +52,6 @@ struct ContentViewPreviews: PreviewProvider {
         ContentView()
             .environmentObject(metronome) // Provide the Metronome object to the environment
             .environmentObject(settingsManager)
-            .environmentObject(themeManager)
             .environmentObject(gradientManager)
             .environmentObject(soundManager)
             .environmentObject(opacities)

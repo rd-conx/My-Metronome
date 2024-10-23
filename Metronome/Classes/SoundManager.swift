@@ -8,9 +8,9 @@
 import Foundation
 
 enum SoundOption: String, CaseIterable {
-    case click = "click"
     case block = "block"
-    static var defaultValue = SoundOption.click
+    case click = "click"
+    static var defaultValue = SoundOption.block
 }
 
 class SoundManager: ObservableObject {
