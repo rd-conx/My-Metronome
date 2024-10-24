@@ -80,7 +80,7 @@ struct FullScreenModalView: View {
                 }
                 Spacer()
                 Text("My Metronome")
-                Text("Version 1.0")
+                Text("Version 1.0.1")
                     .font(.system(size: 13))
                     .padding(.bottom, 10)
                 Text("Developed by Ross Conquer")
