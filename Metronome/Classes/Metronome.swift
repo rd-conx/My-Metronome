@@ -423,7 +423,7 @@ class Metronome: NSObject, ObservableObject {
         case 2:
             currentDenominator = "Minim"
         case 4:
-            currentDenominator = "Crochet"
+            currentDenominator = "Crotchet"
         case 8:
             currentDenominator = "Quaver"
         default:

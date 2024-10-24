@@ -245,11 +245,11 @@
 				8042EFAC2C7004C200009256 /* AccentPresets */,
 				8000D95B2B2C795D00004495 /* PlayView.swift */,
 				803646F42B30A5D400B63C64 /* TempoMarkingView.swift */,
+				807E518F2BBD9DD400C7799E /* DenominatorView.swift */,
 				8072636D2C8A021D004687C2 /* TempoView.swift */,
 				805FE6E92C8484730064D78E /* KnobView.swift */,
 				8072636F2C8A04C9004687C2 /* CircleOfDots.swift */,
 				8000D95D2B2C8E3200004495 /* TimeSigView.swift */,
-				807E518F2BBD9DD400C7799E /* DenominatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -584,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdconx.Metronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -619,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdconx.Metronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
