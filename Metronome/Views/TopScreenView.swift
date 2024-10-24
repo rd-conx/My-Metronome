@@ -62,7 +62,7 @@ struct FullScreenModalView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     
-    let webLink = "http://localhost:3000"
+    let webLink = "https://www.rossconquer.dev/home"
     
     var body: some View {
         ZStack {
