@@ -7,5 +7,5 @@
 
 enum TempoChangeSpeedOptions: String {
     case normal = "Normal"
-    case fast = "Immediate upon release"
+    case fast = "Fast"
 }

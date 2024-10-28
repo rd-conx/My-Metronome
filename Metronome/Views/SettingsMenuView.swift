@@ -27,6 +27,8 @@ struct SettingsMenuView: View {
     @State private var selectedSoundChangedViaClick = false
     @State private var selectedSoundChangedViaOnChange = false
     
+    let docsLink = "https://www.rossconquer.dev/mymetronome?section=docsSettingsMenu"
+    
     var body: some View {
         
         let textColor: Color = colorScheme == .light ? .black : .white
@@ -135,7 +137,7 @@ struct SettingsMenuView: View {
             
             Menu {
                 Picker("Tempo Change", selection: self.$selectedTempoChangeSpeedOption) {
-                    Text("When increasing from below 120 BPM.")
+//                    Text("When increasing from below 120 BPM.").italic()
                     Text(TempoChangeSpeedOptions.normal.rawValue).tag(TempoChangeSpeedOptions.normal)
                     Text(TempoChangeSpeedOptions.fast.rawValue).tag(TempoChangeSpeedOptions.fast)
                 }
@@ -151,6 +153,11 @@ struct SettingsMenuView: View {
             .onChange(of: metronome.quickTempoChangeFromSlow) { oldValue, newValue in
                 self.selectedTempoChangeSpeedOption = newValue
             }
+            
+            Button("Help!", action: {
+                if let url = URL(string: docsLink) {
+                    UIApplication.shared.open(url)
+                }})
             
             
             Button("Reset settings") {
