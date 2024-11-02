@@ -29,8 +29,10 @@ struct TopScreenView: View {
             }
             HStack {
                 Spacer()
-                Image(systemName: "metronome")
-                    .font(.system(size: 40, weight: .regular))
+//                Image(systemName: "metronome")
+                Image("MetronomeIcon")
+                    .resizable()
+                    .frame(width: 50, height: 50)
                     .padding(10)
                     .onTapGesture {
                         showInfoModal = true
