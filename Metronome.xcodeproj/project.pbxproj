@@ -54,7 +54,6 @@
 		808621A12C80816600C6EED6 /* FlashingCapsulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A02C80816600C6EED6 /* FlashingCapsulesView.swift */; };
 		808621A32C80835600C6EED6 /* FlashingCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A22C80835600C6EED6 /* FlashingCapsule.swift */; };
 		808621A52C80835D00C6EED6 /* InteractiveCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */; };
-		808621AF2C81CED400C6EED6 /* NewPresetNamePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */; };
 		8086FFE82B1FAA8500E6EBA0 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */; };
 		808E9C862C6105F700672D2A /* MetronomeIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 808E9C852C6105F700672D2A /* MetronomeIcon.jpg */; };
 		808E9C882C612F4300672D2A /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808E9C872C612F4300672D2A /* SettingsMenuView.swift */; };
@@ -127,7 +126,6 @@
 		808621A02C80816600C6EED6 /* FlashingCapsulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashingCapsulesView.swift; sourceTree = "<group>"; };
 		808621A22C80835600C6EED6 /* FlashingCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashingCapsule.swift; sourceTree = "<group>"; };
 		808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCapsule.swift; sourceTree = "<group>"; };
-		808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPresetNamePublisher.swift; sourceTree = "<group>"; };
 		8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		808E9C852C6105F700672D2A /* MetronomeIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MetronomeIcon.jpg; sourceTree = "<group>"; };
 		808E9C872C612F4300672D2A /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				80208DD42C5E35F20020FA56 /* SettingsManager.swift */,
 				803385AE2C5D3FC5009F0FC9 /* GradientManager.swift */,
 				80A0404C2C5CEC75006CAF82 /* SoundManager.swift */,
-				808621AE2C81CED400C6EED6 /* NewPresetNamePublisher.swift */,
 				805FE6ED2C84B8FD0064D78E /* TapTempo.swift */,
 				80545A3B2C85FFD3001A2881 /* Opacities.swift */,
 				80545A452C885203001A2881 /* ViewsManager.swift */,
@@ -407,7 +404,6 @@
 				807263702C8A04C9004687C2 /* CircleOfDots.swift in Sources */,
 				803BAD242C73419F004E3C39 /* ResetCurrentPresetsAlert.swift in Sources */,
 				80545A462C885203001A2881 /* ViewsManager.swift in Sources */,
-				808621AF2C81CED400C6EED6 /* NewPresetNamePublisher.swift in Sources */,
 				8000D95E2B2C8E3200004495 /* TimeSigView.swift in Sources */,
 				803BAD222C7340C1004E3C39 /* ChangePresetNameAlert.swift in Sources */,
 				80C3081F2C90445A00CB5BBE /* ThemeOption.swift in Sources */,

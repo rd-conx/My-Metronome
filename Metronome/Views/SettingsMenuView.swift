@@ -154,16 +154,20 @@ struct SettingsMenuView: View {
                 self.selectedTempoChangeSpeedOption = newValue
             }
             
-            Button("Help!", action: {
+            Button(action: {
                 if let url = URL(string: docsLink) {
                     UIApplication.shared.open(url)
-                }})
+                }}, label: {
+                    Label("Help", systemImage: "questionmark")
+                })
             
             
-            Button("Reset settings") {
+            Button(action: {
                 // Show are you sure popover
                 showResetAlert = true
-            }
+            }, label: {
+                Label("Reset settings", systemImage: "trash")
+            })
         } label: {
             Image(systemName: "gear")
                 .font(.system(size: 21, weight: .light))
