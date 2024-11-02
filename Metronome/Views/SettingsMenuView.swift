@@ -158,7 +158,7 @@ struct SettingsMenuView: View {
                 if let url = URL(string: docsLink) {
                     UIApplication.shared.open(url)
                 }}, label: {
-                    Label("Help", systemImage: "questionmark")
+                    Label("Help", systemImage: "arrow.up.right.square")
                 })
             
             
