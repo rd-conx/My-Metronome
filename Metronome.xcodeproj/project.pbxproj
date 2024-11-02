@@ -55,9 +55,7 @@
 		808621A32C80835600C6EED6 /* FlashingCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A22C80835600C6EED6 /* FlashingCapsule.swift */; };
 		808621A52C80835D00C6EED6 /* InteractiveCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */; };
 		8086FFE82B1FAA8500E6EBA0 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */; };
-		808E9C862C6105F700672D2A /* MetronomeIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 808E9C852C6105F700672D2A /* MetronomeIcon.jpg */; };
 		808E9C882C612F4300672D2A /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808E9C872C612F4300672D2A /* SettingsMenuView.swift */; };
-		808E9C8A2C6143F100672D2A /* MetronomeIconDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */; };
 		8098C53C2BD7B6BF008F2F32 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8098C53B2BD7B6BF008F2F32 /* CapsuleView.swift */; };
 		80A0404D2C5CEC75006CAF82 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A0404C2C5CEC75006CAF82 /* SoundManager.swift */; };
 		80C3081F2C90445A00CB5BBE /* ThemeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3081E2C90445A00CB5BBE /* ThemeOption.swift */; };
@@ -127,9 +125,7 @@
 		808621A22C80835600C6EED6 /* FlashingCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashingCapsule.swift; sourceTree = "<group>"; };
 		808621A42C80835D00C6EED6 /* InteractiveCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCapsule.swift; sourceTree = "<group>"; };
 		8086FFE72B1FAA8500E6EBA0 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
-		808E9C852C6105F700672D2A /* MetronomeIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MetronomeIcon.jpg; sourceTree = "<group>"; };
 		808E9C872C612F4300672D2A /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
-		808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MetronomeIconDark.jpg; sourceTree = "<group>"; };
 		8098C53B2BD7B6BF008F2F32 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		80A0404C2C5CEC75006CAF82 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		80C3081E2C90445A00CB5BBE /* ThemeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOption.swift; sourceTree = "<group>"; };
@@ -255,8 +251,6 @@
 		805645A42B163B4700DB41B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				808E9C852C6105F700672D2A /* MetronomeIcon.jpg */,
-				808E9C892C6143F100672D2A /* MetronomeIconDark.jpg */,
 				800ACCE32B402DAF009D0A72 /* Click */,
 				806714D62B402C4B00BA3162 /* Block */,
 			);
@@ -370,11 +364,9 @@
 				805645952B1628F000DB41B9 /* Preview Assets.xcassets in Resources */,
 				800E75F62BE0F72000B79F6A /* click1.wav in Resources */,
 				805645922B1628F000DB41B9 /* Assets.xcassets in Resources */,
-				808E9C862C6105F700672D2A /* MetronomeIcon.jpg in Resources */,
 				8086219B2C807BE200C6EED6 /* block3.wav in Resources */,
 				8086219C2C807BE200C6EED6 /* block1.wav in Resources */,
 				800E75F92BE0F72000B79F6A /* click4.wav in Resources */,
-				808E9C8A2C6143F100672D2A /* MetronomeIconDark.jpg in Resources */,
 				8086219A2C807BE200C6EED6 /* block4.wav in Resources */,
 				800E75F82BE0F72000B79F6A /* click2.wav in Resources */,
 				8086218B2C80728A00C6EED6 /* click3.wav in Resources */,
