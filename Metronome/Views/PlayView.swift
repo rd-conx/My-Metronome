@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct PlayView: View {
     
@@ -21,6 +22,8 @@ struct PlayView: View {
     
     @EnvironmentObject var deviceScreen: DeviceScreen
     
+    @State private var showVolumeDownAlert: Bool = false
+    
     var body: some View {
         
         let tintColor: Color = colorScheme == .light ? .black: .white
@@ -32,6 +35,11 @@ struct PlayView: View {
             .frame(minWidth: 50, minHeight: self.deviceScreen.componentSizing[.playButtonFrameMinHeight])
             .tint(tintColor)
             .onTapGesture {
+                if (!metronome.isPlaying) {
+                    if (metronome.volumeIsDown()) {
+                        showVolumeDownAlert = true
+                    }
+                }
                 metronome.pressPlayStopButton()
                    metronome.onTick = { bar, beat in
                        self.currentBar = bar
@@ -43,7 +51,30 @@ struct PlayView: View {
                 playButtonType = newValue
             }
             .sensoryFeedback(.impact, trigger: playButtonType)
+            .sheet(isPresented: $showVolumeDownAlert) {
+                VStack {
+                    Text("Volume is set to zero. Increase it to hear the metronome.")
+                        .padding(.vertical)
+                        .multilineTextAlignment(.center)
+                    MPVolumeViewWrapper()
+                        .frame(width: deviceScreen.size.width * 0.7, height: 50)
+                        .padding(.top)
+                    Button("Ok") {
+                        showVolumeDownAlert = false
+                    }
+                    .padding()
+                }
+                .presentationDetents([.fraction(0.3)])
+            }
     }
+}
+
+struct MPVolumeViewWrapper: UIViewRepresentable {
+    func makeUIView(context: Context) -> MPVolumeView {
+        MPVolumeView()
+    }
+
+    func updateUIView(_ uiView: MPVolumeView, context: Context) {}
 }
 
 

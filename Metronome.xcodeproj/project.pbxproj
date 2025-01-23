@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,6 +131,10 @@
 		80C3081E2C90445A00CB5BBE /* ThemeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8074CEDB2D00675B00B2F592 /* Old */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Old; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		805645872B1628EE00DB41B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -207,6 +211,7 @@
 		8056458C2B1628EE00DB41B9 /* Metronome */ = {
 			isa = PBXGroup;
 			children = (
+				8074CEDB2D00675B00B2F592 /* Old */,
 				808160E62CC7ACC8000528F5 /* Info.plist */,
 				8056458D2B1628EE00DB41B9 /* MetronomeApp.swift */,
 				803BAD252C739C5E004E3C39 /* Structs */,
@@ -313,6 +318,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8074CEDB2D00675B00B2F592 /* Old */,
 			);
 			name = Metronome;
 			packageProductDependencies = (
